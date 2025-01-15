@@ -16,7 +16,10 @@ The project is completely independent and Open Source.
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/mariya-saprikina/apple-notes-clone/main/app/src/main/java/com/example/applenotesclone/util/images/Screenshot_20250115_151301.png" width="33%"></img> <img src="https://via.placeholder.com/250" width="33%"></img> <img src="https://via.placeholder.com/250" width="33%"></img>
+<img src="https://raw.githubusercontent.com/mariya-saprikina/apple-notes-clone/main/app/src/main/java/com/example/applenotesclone/util/images/Screenshot_20250115_151301.png" width="33%"></img>
+<img src="https://raw.githubusercontent.com/mariya-saprikina/apple-notes-clone/main/app/src/main/java/com/example/applenotesclone/util/images/Screenshot_20250115_151559.png" width="33%"></img>
+<img src="https://raw.githubusercontent.com/mariya-saprikina/apple-notes-clone/main/app/src/main/java/com/example/applenotesclone/util/images/Screenshot_20250115_151644.png" width="33%"></img>
+<img src="https://raw.githubusercontent.com/mariya-saprikina/apple-notes-clone/main/app/src/main/java/com/example/applenotesclone/util/images/Screenshot_20250115_152128.png" width="33%"></img>
 
 ## Built With 🛠
 
