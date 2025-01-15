@@ -26,6 +26,7 @@ import com.example.applenotesclone.ui.components.PopBackStack
 import com.example.applenotesclone.ui.components.Headline
 import com.example.applenotesclone.ui.components.NotesCard
 import com.example.applenotesclone.ui.components.NotesDivider
+import com.example.applenotesclone.ui.components.SwipeToDeleteContainer
 import com.example.applenotesclone.util.UiEvent
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -78,14 +79,24 @@ fun NoteListScreen(
             Headline(text = folderWithNotes.value.folder.name)
             NotesCard {
                 LazyColumn(modifier = Modifier.fillMaxWidth()) {
-                    itemsIndexed(folderWithNotes.value.notes) { index, note ->
-                        NoteItem(note = note, modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(10.dp)
-                            .clickable {
-                                viewModel.onEvent(NoteListEvent.OnNoteClick(note))
-                            })
-                        
+                    itemsIndexed(folderWithNotes.value.notes, key = { _, note -> note.id as Any }) { index, note ->
+                        SwipeToDeleteContainer(
+                            item = note,
+                            onDelete = {
+                                viewModel.onEvent(NoteListEvent.OnDeleteNoteClick(it))
+                            }
+                        ) { note ->
+                            NoteItem(
+                                note = note,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(10.dp)
+                                    .clickable {
+                                        viewModel.onEvent(NoteListEvent.OnNoteClick(note))
+                                    }
+                            )
+                        }
+
                         if (index < folderWithNotes.value.notes.size - 1) {
                             NotesDivider(paddingStart = 20.dp)
                         }

@@ -12,6 +12,8 @@ interface FolderRepository {
 
     suspend fun getNoteById(id: Int): Note?
 
+    suspend fun deleteNote(note: Note)
+
     suspend fun getFolderById(id: Int): Folder?
 
     suspend fun getFolderByName(name: String): Folder?

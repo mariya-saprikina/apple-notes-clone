@@ -18,6 +18,10 @@ class FolderRepositoryImpl(
         return dao.getNoteById(id)
     }
 
+    override suspend fun deleteNote(note: Note) {
+        dao.deleteNote(note)
+    }
+
     override suspend fun getFolderById(id: Int): Folder? {
         return dao.getFolderById(id)
     }

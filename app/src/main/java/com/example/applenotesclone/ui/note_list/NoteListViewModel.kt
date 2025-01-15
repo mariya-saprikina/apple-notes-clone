@@ -43,6 +43,12 @@ class NoteListViewModel @Inject constructor(
             is NoteListEvent.OnNoteClick -> {
                 sendUiEvent(UiEvent.Navigate(Routes.ADD_EDIT_NOTE + "?noteId=${event.note.id}"))
             }
+
+            is NoteListEvent.OnDeleteNoteClick -> {
+                viewModelScope.launch {
+                    repository.deleteNote(event.note)
+                }
+            }
         }
     }
 

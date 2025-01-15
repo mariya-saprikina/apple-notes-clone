@@ -38,7 +38,7 @@ fun TransparentHintTextField(
                 .fillMaxWidth(),
             placeholder = { Text(text = hint, style = textStyle, color = LightGreyFontColor) },
             colors = TextFieldDefaults.textFieldColors(
-                textColor = DarkGreyFontColor,
+                unfocusedTextColor = DarkGreyFontColor,
                 containerColor = Color.Transparent,
                 cursorColor = DarkYellowColor,
                 selectionColors = TextSelectionColors(DarkYellowColor, LightYellowColor),
